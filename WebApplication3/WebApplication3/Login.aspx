@@ -36,14 +36,17 @@
     <tr>
         <td>
                     
+            <asp:CheckBox ID="chkBoxRememberMe" runat="server" OnCheckedChanged="CheckBox1_CheckedChanged" />
+                    
         </td>    
         <td>
-            <asp:Button ID="btnLogin" runat="server" Text="Login" />
+            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
         </td>    
     </tr>
 </table>
 <br />
-<a href="/Registration/Register.aspx">Click here to register</a> 
+<a href="/Registration/Register.aspx">Click here to register</a>
+        <asp:Label ID="lblMessage" runat="server"></asp:Label>
     
 </div>
     </form>
