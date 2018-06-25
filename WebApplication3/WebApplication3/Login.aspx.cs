@@ -34,11 +34,11 @@ namespace WebApplication3
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 //Formsauthentication is in system.web.security
-                string encryptedpassword = FormsAuthentication.HashPasswordForStoringInConfigFile(password, "SHA1");
+                //string encryptedpassword = FormsAuthentication.HashPasswordForStoringInConfigFile(password, "SHA1");
 
                 //sqlparameter is in System.Data namespace
                 SqlParameter paramUsername = new SqlParameter("@UserName", username);
-                SqlParameter paramPassword = new SqlParameter("@Password", encryptedpassword);
+                SqlParameter paramPassword = new SqlParameter("@Password", password);
 
                 cmd.Parameters.Add(paramUsername);
                 cmd.Parameters.Add(paramPassword);
@@ -47,17 +47,11 @@ namespace WebApplication3
                 SqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
-                    int RetryAttempts = Convert.ToInt32(rdr["RetryAttempts"]);
                     if (Convert.ToBoolean(rdr["AccountLocked"]))
                     {
                         lblMessage.Text = "Account locked. Please contact administrator";
                     }
-                    else if (RetryAttempts > 0)
-                    {
-                        int AttemptsLeft = (4 - RetryAttempts);
-                        lblMessage.Text = "Invalid user name and/or password. " +
-                            AttemptsLeft.ToString() + "attempt(s) left";
-                    }
+                    
                     else if (Convert.ToBoolean(rdr["Authenticated"]))
                     {
                         FormsAuthentication.RedirectFromLoginPage(txtUserName.Text, chkBoxRememberMe.Checked);

@@ -88,7 +88,7 @@ namespace WebApplication3.Registration
         new SqlParameter()
         {
             ParameterName = "@Password",
-            Value = FormsAuthentication.HashPasswordForStoringInConfigFile(txtNewPassword.Text, "SHA1")
+            Value = txtNewPassword.Text
         }
     };
 

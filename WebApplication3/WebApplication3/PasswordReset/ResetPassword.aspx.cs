@@ -58,9 +58,9 @@ namespace WebApplication3.Registration
             StringBuilder sbEmailBody = new StringBuilder();
             sbEmailBody.Append("Dear " + UserName + ",<br/><br/>");
             sbEmailBody.Append("Please click on the following link to reset your password");
-            sbEmailBody.Append("<br/>"); sbEmailBody.Append("http://localhost/WebApplication1/Registration/ChangePassword.aspx?uid=" + UniqueId);
+            sbEmailBody.Append("<br/>"); sbEmailBody.Append("http://localhost/PasswordReset/ChangePassword.aspx?uid=" + UniqueId);
             sbEmailBody.Append("<br/><br/>");
-            sbEmailBody.Append("<b>Pragim Technologies</b>");
+            sbEmailBody.Append("<b>NMCRIS Application</b>");
 
             mailMessage.IsBodyHtml = true;
 

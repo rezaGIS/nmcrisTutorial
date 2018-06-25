@@ -33,9 +33,9 @@ namespace WebApplication3.Registration
 
                         SqlParameter username = new SqlParameter("@UserName", txtUserName.Text);
                         // FormsAuthentication calss is in System.Web.Security namespace
-                        string encryptedPassword = FormsAuthentication.
-                            HashPasswordForStoringInConfigFile(txtPassword.Text, "SHA1");
-                        SqlParameter password = new SqlParameter("@Password", encryptedPassword);
+                        //string encryptedPassword = FormsAuthentication.
+                        //    HashPasswordForStoringInConfigFile(txtPassword.Text, "SHA1");
+                        SqlParameter password = new SqlParameter("@Password", txtPassword.Text);
                         SqlParameter email = new SqlParameter("@Email", txtEmail.Text);
 
                         cmd.Parameters.Add(username);
