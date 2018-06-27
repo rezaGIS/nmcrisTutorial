@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link rel="stylesheets" href="Content/bootstrap.min.css"/>
+    <link rel="stylesheets" href="~/Content/bootstrap.min.css"/>
     <title>NMCRIS PW RESET</title>
 </head>
 <body>
@@ -44,11 +44,10 @@
                         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
                     </td>
                 </tr>
+                <asp:Label ID="lblMessage" runat="server"></asp:Label>
             </table>
             <br />
-            <a href="/Registration/Register.aspx">Click here to reset password</a>
-            <asp:Label ID="lblMessage" runat="server"></asp:Label>
-
+            <a href="/PasswordReset/ResetPassword.aspx">Click here to reset password</a>
         </div>
     </form>
 </body>

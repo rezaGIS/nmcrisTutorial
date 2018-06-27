@@ -19,7 +19,6 @@ namespace WebApplication3
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            // Authenticate againts the list stored in web.config
             AuthenticateUser(txtUserName.Text, txtPassword.Text);
 
         }

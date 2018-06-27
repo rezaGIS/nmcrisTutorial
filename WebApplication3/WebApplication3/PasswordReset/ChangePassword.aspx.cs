@@ -36,6 +36,7 @@ namespace WebApplication3.Registration
             if (ChangeUserPassword())
             {
                 lblMessage.Text = "Password Changed Successfully!";
+                Response.Redirect("https://nmcris.dca.state.nm.us/nmcrist/Security/SignIn.aspx");
             }
             else
             {

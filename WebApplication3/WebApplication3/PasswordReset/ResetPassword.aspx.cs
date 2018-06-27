@@ -28,8 +28,9 @@ namespace WebApplication3.Registration
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter paramUsername = new SqlParameter("@UserName", txtUserName.Text);
-
+                //SqlParameter paramEmail = new SqlParameter("@Email", txtEmail.Text);
                 cmd.Parameters.Add(paramUsername);
+                //cmd.Parameters.Add(paramEmail);
 
                 con.Open();
                 SqlDataReader rdr = cmd.ExecuteReader();
@@ -43,7 +44,7 @@ namespace WebApplication3.Registration
                     else
                     {
                         lblMessage.ForeColor = System.Drawing.Color.Red;
-                        lblMessage.Text = "Username not found!";
+                        lblMessage.Text = "Username/Email not found!";
                     }
                 }
             }
@@ -52,8 +53,6 @@ namespace WebApplication3.Registration
         {
             // MailMessage class is present is System.Net.Mail namespace
             MailMessage mailMessage = new MailMessage("kassr6@gmail.com", ToEmail);
-
-
             // StringBuilder class is present in System.Text namespace
             StringBuilder sbEmailBody = new StringBuilder();
             sbEmailBody.Append("Dear " + UserName + ",<br/><br/>");

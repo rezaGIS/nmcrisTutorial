@@ -14,14 +14,24 @@
         <tr>
             <td colspan="2">
                 <b>Reset my password</b>
+                <p>Enter your username and email below:</p>
             </td>
         </tr>
         <tr>
             <td>
-                User Name
+                Username:
             </td>    
             <td>
                 <asp:TextBox ID="txtUserName" Width="150px" runat="server">
+                </asp:TextBox>
+            </td>    
+        </tr>
+        <tr>
+            <td>
+                Email:
+            </td>    
+            <td>
+                <asp:TextBox ID="txtEmail" Width="150px" runat="server">
                 </asp:TextBox>
             </td>    
         </tr>

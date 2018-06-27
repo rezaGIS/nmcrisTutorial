@@ -63,6 +63,6 @@ C:\Users\krezagholi\Desktop\KassGIT\nmcrisTutorial\WebApplication3\WebApplicatio
 C:\Users\krezagholi\Desktop\KassGIT\nmcrisTutorial\WebApplication3\WebApplication3\bin\System.Runtime.xml
 C:\Users\krezagholi\Desktop\KassGIT\nmcrisTutorial\WebApplication3\WebApplication3\bin\System.Threading.Tasks.xml
 C:\Users\krezagholi\Desktop\KassGIT\nmcrisTutorial\WebApplication3\WebApplication3\obj\Debug\WebApplication3.csproj.App.config
-C:\Users\krezagholi\Desktop\KassGIT\nmcrisTutorial\WebApplication3\WebApplication3\obj\Debug\WebApplication3.csprojResolveAssemblyReference.cache
 C:\Users\krezagholi\Desktop\KassGIT\nmcrisTutorial\WebApplication3\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\krezagholi\Desktop\KassGIT\nmcrisTutorial\WebApplication3\WebApplication3\obj\Debug\WebApplication3.pdb
+C:\Users\krezagholi\Desktop\KassGIT\nmcrisTutorial\WebApplication3\WebApplication3\obj\Debug\WebApplication3.csprojResolveAssemblyReference.cache
